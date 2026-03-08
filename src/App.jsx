@@ -1,11 +1,12 @@
 import './App.css'
+import image from "./assets/IMG_8005.PNG" 
 import { useState } from 'react'
 
 function Header({ SetCurrentPage }) {
   return (
     <header>
       <p>Fossele Wilfried</p>
-      <nav>
+      <nav className='navBar'>
         <button onClick={() => { SetCurrentPage("Home") }}> <a href='#'>Home</a> </button>
         <button onClick={() => { SetCurrentPage("About") }}>  <a href="#">About</a></button>
         <button onClick={() => { SetCurrentPage("Project") }}>  <a href="#">Project</a> </button>
@@ -33,21 +34,29 @@ function SocialMedia() {
 
 function Footer() {
   return (
-    <div className='Footer'>
+    <footer>
       <p>all right reserved</p>
-      <div>Projects</div>
+      <div className='footer_left'>
+       <div>Projects</div>
       <div>Blog</div>
       <SocialMedia />
-
-    </div>
+      </div>
+    </footer>
   )
 }
 
 function Overview() {
   return (
     <div className='overview-container'>
-      <h1><span>Fossele Tazon</span> <br /> <span>Wilfried</span></h1>
-      <p className='experience'></p>
+      <div className='overview_content'>
+        <div >
+        <h1><span>Fossele Tazon</span> <br /> <span>Wilfried</span></h1>
+         <p className='experience'></p>
+        </div>
+         
+         <img src={image} alt="not working"/>
+      </div>
+    
       <div className='get_to_know_me'>
         <button>Explore my journey</button><button className='download_Resume'> Download Resume</button>
       </div>
@@ -60,9 +69,9 @@ function Overview() {
 
 function InfoCards() {
   return (
-    <div className='cards'>
+    <div className='cards_container'>
       <div className='overview'></div>
-      <div ClassName="card">
+      <div className='card'>
         <div className='card1'>experience</div>
         <div className='card2'>stories</div>
         <div className='card3'>archievement</div>
@@ -106,7 +115,7 @@ function Blog() {
 }
 
 function Page() {
-  const [currentPage, SetCurrentPage] = useState("About");
+  const [currentPage, SetCurrentPage] = useState("Home");
 
   return (
     <div>
