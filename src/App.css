@@ -82,3 +82,54 @@ footer{
  display:flex;
  flex-direction: row;
 }
+
+.btn-container{
+    width: 16rem;
+    height: 16rem;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    transition: ease-in;
+    transition-duration: 1s;
+}
+
+.nvisi{
+    padding: 10px;
+}
+
+.btn{
+    width: 3rem;
+    height: 1rem;
+    background-color: black;
+    color: white;
+ transition: color 200ms linear;
+}
+
+.dis-btn{
+    display: none;
+    width: 3rem;
+    height: 1rem; 
+
+  
+}
+
+
+.dis-btn-container{
+    display: none;
+    width: 16rem;
+    height: 16rem;
+    margin: 0 auto;
+    background-color: blue;
+   transition: ease-out;
+   transition-duration: 0.5s;
+}
+
+.dis-btn-container{
+    display: none;
+    width: 16rem;
+    height: 16rem;
+    margin: 0 auto;
+    background-color: blue;
+   transition: ease-out;
+   transition-duration: 0.5s;
+}
